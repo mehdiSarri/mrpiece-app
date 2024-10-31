@@ -1,0 +1,15 @@
+{
+  "name": "mrpiece-app",
+  "version": "1.0.0",
+  "description": "mister-piece hub application",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "start": "node backend/server.js"
+  },
+  "author": "Sarri Mehdi Mohammed",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.21.1"
+  }
+}
