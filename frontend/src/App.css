@@ -1,38 +1,79 @@
-.App {
-  text-align: center;
+a {
+  text-decoration: none;
+  color: rgb(85, 81, 81);
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+.app {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.header {
+  background-color: rgb(92, 80, 103);
+  min-height: 80px;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.main {
+  color: white;
+  display: flex;
+  flex: 1;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.footer {
+  background-color: rgb(92, 80, 103);
+  min-height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  padding: 0 100px 0 100px;
+}
+.list-product {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  border: 1px solid rgb(177, 168, 168);
+  padding: 10px;
+  margin-bottom: 30px;
+  border-radius: 10px;
+}
+.product-vew {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+}
+.product-section {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  padding: 30px;
+  border: 1px solid rgb(189, 183, 183);
+  align-items: center;
+  margin-bottom: 50px;
+  border-radius: 10px;
+}
+.product-section img {
+  width: 400px;
+}
+.product-vew button {
+  padding: 10px 20px 10px 20px;
 }

@@ -1,26 +1,29 @@
 import mongoose from "mongoose";
 
+// Définition du schéma pour le modèle Order
 const orderSchema = new mongoose.Schema(
   {
     user: {
-      type: mongoose.Schema.Types.ObjectId,
+      type: mongoose.Schema.Types.ObjectId, // Référence à un utilisateur
       required: true,
-      ref: "User",
+      ref: "User", // Référence à la collection User
     },
     orderItems: [
+      // Tableau d'objets pour les articles de la commande
       {
         name: { type: String, required: true },
         qty: { type: Number, required: true },
         image: { type: String, required: true },
         price: { type: Number, required: true },
         product: {
-          type: mongoose.Schema.Types.ObjectId,
+          type: mongoose.Schema.Types.ObjectId, // Référence à un produit
           required: true,
           ref: "Product",
         },
       },
     ],
     shippingAddress: {
+      // Adresse de livraison
       adress: { type: String, required: true },
       city: { type: String, required: true },
       postalCode: { type: String, required: true },
@@ -31,6 +34,7 @@ const orderSchema = new mongoose.Schema(
       required: true,
     },
     paymentResult: {
+      // Détails sur le paiement
       id: { type: String },
       status: { type: String },
       update_time: { type: String },
@@ -62,7 +66,7 @@ const orderSchema = new mongoose.Schema(
       default: false,
     },
     paidAt: {
-      type: Date,
+      type: Date, // Date de paiement
     },
     isDelivered: {
       type: Boolean,
@@ -70,14 +74,14 @@ const orderSchema = new mongoose.Schema(
       default: false,
     },
     delivredAt: {
-      type: Date,
+      type: Date, // Date de livraison
     },
   },
   {
-    timestamps: true,
+    timestamps: true, // Ajoute les timestamps
   }
 );
 
+// Création du modèle Order basé sur le schéma
 const Order = mongoose.model("Order", orderSchema);
-
-export default Order;
+export default Order; // Exporte le modèle Order
